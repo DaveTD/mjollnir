@@ -1,4 +1,4 @@
-# Mjolnir
+# Mjollnir
 
 A gem for prepending and appending text to rails generated files.
 
