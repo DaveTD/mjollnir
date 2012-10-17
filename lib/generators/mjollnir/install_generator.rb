@@ -3,7 +3,7 @@ module Mjollnir
 	class InstallGenerator < Rails::Generators::Base
 		desc "Creates the four required files for mjollnir"
 
-		source_root File.expand_path("../../templates", __FILE__)
+		source_root File.expand_path("../templates", __FILE__)
 
 		def create_lib_files
 			mjollnir_root = "lib/mjollnir"
