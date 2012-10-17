@@ -2,16 +2,16 @@
 
 A gem for prepending and appending text to rails generated files.
 
-## Usage
+## Installation
 
-add `gem 'mjollnir'` to your Gemfile
-
-Create a directory in your lib directory called `mjollnir`.
-Add four files to this directory:  
+Use the generator `rails g mjollnir:install`.  This will create the four necessary files in your lib directory:  
 1. `append.rb` - this file contains instructions for insertions at the end of generated files.  
 2. `prepend.rb` - this file contains instructions for insertions at the beinning of generated files.  
 3. `comment_starts.csv` - put lines in this file when you need to create block comments in different file types.  For example, use a line, `rb,=start` for the start of a ruby block.  When generating text in the `append.rb` or `prepend.rb` files, use `<%= universal_comment_start %>` to declare the start of any comment block, so long as that file type has been included in `comment_starts.csv`.  
 4. `comment_ends.csv` - much like `comment_starts.csv`, but this file is for comment block ends in generated text.  For example, use `erb,-->` to end a comment block. in an erb file.  When generating text in the `append.rb` or `prepend.rb` files, use `<%= universal_comment_end %>` to declare the end of any comment block, so long as that file type has been included in `comment.ends.csv`.  
+
+The csv files are generated with some common default values.  Do be careful when writing your append and prepends when writing haml or yml files, as these file types do not take block comments in the way the other files do.
+                    
 
 ## Variables
 
@@ -46,7 +46,6 @@ The following usable variables for `append.rb` and `prepend.rb`:
 rb,=end  
 scss,*/  
 js,*/  
-haml,#-  
 coffee,###  
 css,*/  
 erb,-->  
