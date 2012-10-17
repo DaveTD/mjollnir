@@ -1,4 +1,4 @@
-# Mjollnir
+# Mjollnir - 0.2.0
 
 A gem for prepending and appending text to rails generated files.
 
@@ -63,5 +63,7 @@ html,-->
 
 ## Planned changes
 
-1. Version 0.2.0 will add a generator for the prepend, and append ruby files, as well as for the two csvs.
-2. The change after that will be to automate some testing.
+TODO 
+- Automated testing  
+- Add options for common licences
+- Add example for haml and yml prepends
